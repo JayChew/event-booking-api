@@ -1,4 +1,4 @@
-package routes
+package controllers
 
 import (
 	"event-booking-api/database"
@@ -7,15 +7,15 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func SetupRoutes(app *fiber.App) {
-	api := app.Group("/api")
+// func SetupRoutes(app *fiber.App) {
+// 	api := app.Group("/api")
 
-	api.Get("/events", GetEvents)
-	api.Post("/events", CreateEvent)
-	api.Get("/events/:id", GetEvent)
-	api.Put("/events/:id", UpdateEvent)
-	api.Delete("/events/:id", DeleteEvent)
-}
+// 	api.Get("/events", GetEvents)
+// 	api.Post("/events", CreateEvent)
+// 	api.Get("/events/:id", GetEvent)
+// 	api.Put("/events/:id", UpdateEvent)
+// 	api.Delete("/events/:id", DeleteEvent)
+// }
 
 func GetEvents(c *fiber.Ctx) error {
 	var events []models.Event
