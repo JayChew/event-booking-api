@@ -21,4 +21,5 @@ func SetupRoutes(app *fiber.App) {
 	events.Get("/:id", controllers.GetEvent)
 	events.Put("/:id", controllers.UpdateEvent)
 	events.Delete("/:id", controllers.DeleteEvent)
+	events.Patch("/:id/restore", controllers.RestoreEvent) // New restore endpoint
 }

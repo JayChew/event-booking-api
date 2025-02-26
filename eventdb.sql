@@ -13,7 +13,7 @@ CREATE TABLE events (
     location VARCHAR(255) NOT NULL, -- Event location
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  -- Created timestamp
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- Updated timestamp
-    created_at TIMESTAMP -- Delete timestamp
+    deleted_at TIMESTAMP -- Delete timestamp
 );
 
 -- Ensure updated_at is updated automatically
